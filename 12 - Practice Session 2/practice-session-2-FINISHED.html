@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/reset.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>12 - Practice Session 2</title>
+</head>
+
+<style>
+  /* Make the container-one grid have 5 columns of equal width
+     Give the columns a gap of 20px and the rows a gap of 40px
+     Make the first two rows 50px, the next two rows 100px, and the fifth 40px
+     Using grid-template-areas set up the first 2 rows to be the 'header', then setup the first 2 columns in the next 2 rows to be a 'sider-bar', and the last 3 columns in the next 2 rows to be the 'content'. Finally setup the footer to be the middle three columns in the last row.
+  */
+  .container-one {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 50px) repeat(2, 100px) 40px;
+    grid-template-areas:
+      "header header header header header"
+      "header header header header header"
+      "sidebar sidebar content content content"
+      "sidebar sidebar content content content"
+      ". footer footer footer ."
+  }
+  .container-one .header {
+    grid-area: header;
+  }
+  .container-one .sidebar {
+    grid-area: sidebar;
+  }
+  .container-one .content {
+    grid-area: content;
+  }
+  .container-one .footer {
+    grid-area: footer;
+  }
+
+  .continer-two {
+
+  }
+
+  .item {
+    padding: .25em;
+  }
+  .separator {
+    margin-bottom: 1em;
+  }
+</style>
+
+<body>
+  <div class="container-one">
+    <div class="item header">Header</div>
+    <div class="item sidebar">Sidebar</div>
+    <div class="item content">Content</div>
+    <div class="item footer">Footer</div>
+  </div>
+  <div class="separator"></div>
+  <div class="container-two">
+    <div class="item item26">26</div>
+    <div class="item item27">27</div>
+    <div class="item item28">28</div>
+    <div class="item item29">29</div>
+    <div class="item pizza">🍕</div>
+    <div class="item item31">31</div>
+    <div class="item item32">32</div>
+    <div class="item item33">33</div>
+    <div class="item item34">34</div>
+    <div class="item item35">35</div>
+    <div class="item item36">36</div>
+    <div class="item item37">37</div>
+    <div class="item item38">38</div>
+    <div class="item item39">39</div>
+    <div class="item item40">40</div>
+    <div class="item item41">41</div>
+    <div class="item item42">42</div>
+    <div class="item item43">43</div>
+    <div class="item item44">44</div>
+    <div class="item item45">45</div>
+    <div class="item item46">46</div>
+    <div class="item item47">47</div>
+    <div class="item item48">48</div>
+    <div class="item item49">49</div>
+    <div class="item party">🎉</div>
+  </div>
+</body>
+
+</html>

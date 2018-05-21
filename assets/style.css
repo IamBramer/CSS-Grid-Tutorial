@@ -1,0 +1,46 @@
+:root {
+  --purple: #6544f4;
+  ;
+}
+
+html {
+  /* Learn about box-sizing at https://css-tricks.com/box-sizing/ */
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Segoe UI", Roboto, Helvetica, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: .5em;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.item {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background: var(--purple);
+  color: #fff;
+  border: 3px solid rgba(0, 0, 0, .3);
+  border-radius: 5px;
+  overflow: hidden;
+  font-weight: 600;
+}

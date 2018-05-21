@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/reset.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>13 - Responsive Grid with auto-fit, auto-fill, and minmax()</title>
+</head>
+
+<style>
+  .container-fill {
+    display: grid;
+    grid-gap: 10px;
+    /* auto-fill forces the grid cells to fill up the container grid */
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
+  
+  .container-fit {
+    display: grid;
+    grid-gap: 10px;
+    /* auto-fit forces the container grid to shrink to the grid cells */
+    grid-template-columns: repeat(auto-fit, 200px);
+  }
+
+  .container-fill-minmax {
+    display: grid;
+    grid-gap: 10px;
+    /* auto-fill forces the grid cells to fill up the container grid */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .container-fit-minmax {
+    display: grid;
+    grid-gap: 10px;
+    /* auto-fit forces the container grid to shrink to the grid cells */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .item {
+    padding: .25em;
+  }
+  .border {
+    border: 2px solid #ccc;
+  }
+  .spacer {
+    margin-bottom: 1em;
+  }
+  .turtle {
+    background: rgb(135, 255, 195);
+    color: #111;
+    grid-column: auto / -1;
+  }
+</style>
+
+<body>
+  <h2>auto-fill, 200px</h2>
+  <div class="container-fill border">
+    <div class="item item1">This is cell 1</div>
+    <div class="item item2">This is cell 2</div>
+    <div class="item item3">This is cell 3</div>
+    <div class="item turtle">This is cell 🐢</div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <h2>auto-fit, 200px</h2>
+  <div class="container-fit border">
+    <div class="item item1">This is cell 1</div>
+    <div class="item item2">This is cell 2</div>
+    <div class="item item3">This is cell 3</div>
+    <div class="item turtle">This is cell 🐢</div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <h2>auto-fill, minmax(150px, 1fr)</h2>
+  <div class="container-fill-minmax border">
+      <div class="item item1">This is cell 1</div>
+      <div class="item item2">This is cell 2</div>
+      <div class="item item3">This is cell 3</div>
+      <div class="item turtle">This is cell 🐢</div>
+    </div>
+  
+    <div class="spacer"></div>
+  
+    <h2>auto-fit, minmax(150px, 1fr)</h2>
+    <div class="container-fit-minmax border">
+      <div class="item item1">This is cell 1</div>
+      <div class="item item2">This is cell 2</div>
+      <div class="item item3">This is cell 3</div>
+      <div class="item turtle">This is cell 🐢</div>
+    </div>
+</body>
+
+</html>

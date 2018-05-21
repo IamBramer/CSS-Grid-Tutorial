@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/reset.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>10 - Naming Grid Lines</title>
+</head>
+
+<style>
+  .container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: [turtle-start] 1fr [unicorn-start] repeat(2, 1fr) [unicorn-end watermelon-start] 1fr [pizza-start] 1fr [pizza-end watermelon-end turtle-end];
+    grid-template-rows: [turtle-top] 2fr [turtle-bottom unicorn-top party-top] repeat(4, 1fr) [unicorn-bottom party-bottom];
+  }
+  .item {
+    padding: .25em;
+  }
+  .turtle {
+    background: rgb(135, 255, 195);
+    grid-column: turtle-start / turtle-end;
+    grid-row: turtle-top / turtle-bottom;
+  }
+  .unicorn {
+    background: rgb(255, 106, 218);
+    grid-column: unicorn-start / unicorn-end;
+    grid-row: unicorn-top / unicorn-bottom;
+  }
+  .watermelon {
+    background: rgb(255, 105, 105);
+    grid-column: watermelon-start / watermelon-end;
+  }
+  .pizza {
+    background: rgb(138, 94, 44);
+    grid-column: pizza-start / pizza-end;
+  }
+  .party {
+    background: rgb(253, 255, 142);
+    grid-row: party-top / party-bottom;
+    grid-column: span 2;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="item turtle">🐢</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+    <div class="item unicorn">🦄</div>
+    <div class="item item10">10</div>
+    <div class="item item11">11</div>
+    <div class="item item12">12</div>
+    <div class="item item13">13</div>
+    <div class="item item14">14</div>
+    <div class="item item15">15</div>
+    <div class="item item16">16</div>
+    <div class="item item17">17</div>
+    <div class="item item18">18</div>
+    <div class="item item19">19</div>
+    <div class="item item20">20</div>
+    <div class="item watermelon">🍉</div>
+    <div class="item item22">22</div>
+    <div class="item item23">23</div>
+    <div class="item item24">24</div>
+    <div class="item item25">25</div>
+    <div class="item item26">26</div>
+    <div class="item item27">27</div>
+    <div class="item item28">28</div>
+    <div class="item item29">29</div>
+    <div class="item pizza">🍕</div>
+    <div class="item item31">31</div>
+    <div class="item item32">32</div>
+    <div class="item item33">33</div>
+    <div class="item item34">34</div>
+    <div class="item item35">35</div>
+    <div class="item item36">36</div>
+    <div class="item item37">37</div>
+    <div class="item item38">38</div>
+    <div class="item item39">39</div>
+    <div class="item item40">40</div>
+    <div class="item item41">41</div>
+    <div class="item item42">42</div>
+    <div class="item item43">43</div>
+    <div class="item item44">44</div>
+    <div class="item item45">45</div>
+    <div class="item item46">46</div>
+    <div class="item item47">47</div>
+    <div class="item item48">48</div>
+    <div class="item item49">49</div>
+    <div class="item party">🎉</div>
+  </div>
+</body>
+
+</html>

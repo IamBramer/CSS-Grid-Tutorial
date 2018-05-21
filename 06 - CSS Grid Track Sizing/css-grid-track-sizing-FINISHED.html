@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/reset.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>06 - CSS Grid Track Sizing</title>
+</head>
+
+<style>
+  .container {
+    display: grid;
+    grid-gap: 10px;
+    /* The 'fr' unit in css grid is a flex unit that determines the amount of 'free space' left so '1fr 2fr 1fr' means the first and third columns will be the same size, but the middle will be twice as big. Reach for 'fr' over '%'
+    
+    The 'auto' unit will set the size of the track to be equal to the size of the item with the largest content in that track
+    */
+    grid-template-columns: auto 2fr 1fr;
+
+    /* When 'fr' is used with rows, keep in mind that it will only distribute size based off the 'height' of the grid, so if no explicit height is given, it will be relative to the amount of content in the items */
+    grid-template-rows: 50vh 3fr 1fr;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+    <div class="item">12</div>
+    <div class="item">13</div>
+    <div class="item">14</div>
+    <div class="item">15</div>
+  </div>
+</body>
+
+</html>
