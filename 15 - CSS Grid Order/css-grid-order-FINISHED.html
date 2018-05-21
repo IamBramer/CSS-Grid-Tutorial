@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/reset.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>15 - CSS Grid Order</title>
+</head>
+
+<style>
+  .container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .item {
+    padding: .5em;
+  }
+  .logo {
+    grid-column: span 1;
+    order: 1;
+  }
+  .nav {
+    grid-column: span 4;
+    order: 0;
+  }
+  .sidebar {
+    grid-column: span 2;
+    order: 3;
+  }
+  .content {
+    grid-column: span 3;
+    order: 2;
+  }
+  .footer {
+    grid-column: 1 / -1;
+    order: 4;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="item logo">Logo</div>
+    <div class="item nav">Navigation</div>
+    <div class="item sidebar">Sidebar</div>
+    <div class="item content">Content</div>
+    <div class="item footer">Footer</div>
+  </div>
+</body>
+
+</html>

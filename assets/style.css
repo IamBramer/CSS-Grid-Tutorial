@@ -34,13 +34,13 @@ h1 {
 }
 
 .item {
-  display: grid;
-  justify-content: center;
-  align-content: center;
   background: var(--purple);
   color: #fff;
   border: 3px solid rgba(0, 0, 0, .3);
   border-radius: 5px;
   overflow: hidden;
   font-weight: 600;
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
