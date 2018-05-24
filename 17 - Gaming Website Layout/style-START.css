@@ -1,0 +1,80 @@
+:root {
+    --purple: #6544f4;
+    --site-width: 1200px;
+    --small-screen: 600px;
+    --nav-height: 60px;
+}
+
+html {
+    /* Learn about box-sizing at https://css-tricks.com/box-sizing/ */
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Helvetica, sans-serif;
+}
+
+html {
+    position: relative;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 320px) {
+    html {
+        font-size: calc(14px + 3 * ((100vw - 320px) / 680));
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    position: relative;
+    line-height: 1.1em;
+}
+
+p {
+    line-height: 1.3em;
+    font-weight: 400;
+    color: #666;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+}
+
+section,
+header {
+    position: relative;
+}
+

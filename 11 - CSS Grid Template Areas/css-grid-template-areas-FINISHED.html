@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/reset.css">
   <link rel="stylesheet" href="../assets/style.css">
-  <title>10 - CSS Grid Template Areas</title>
+  <title>11 - CSS Grid Template Areas</title>
 </head>
 
 <style>
@@ -16,32 +16,38 @@
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 200px 80vh 100px;
     grid-template-areas:
-        "header header"
-        "sidebar content"
-        "footer footer"
+    "header header"
+    "sidebar content"
+    "footer footer"
   }
+
   .header {
-      grid-area: header;
+    grid-area: header;
   }
+
   .sidebar {
     grid-area: sidebar;
   }
+
   .content {
     grid-area: content;
   }
+
   .footer {
     grid-area: footer;
   }
+
   .item {
     padding: .25em;
   }
+
   .turtle {
     background: rgb(135, 255, 195);
     grid-column: sidebar-start / content-end;
     /* grid-row: content-end / footer-start; */
     /* grid-row: content-start / footer-start; */
-
   }
+
   h2 {
     font-size: 1.5em;
     margin: 0;
@@ -51,10 +57,10 @@
     .container {
       grid-template-rows: 200px 80vh 300px 100px;
       grid-template-areas:
-        "header header"
-        "content content"
-        "sidebar sidebar"
-        "footer footer"
+      "header header"
+      "content content"
+      "sidebar sidebar"
+      "footer footer"
     }
   }
 </style>
@@ -62,17 +68,17 @@
 <body>
   <div class="container">
     <div class="item header">
-        <h2>This is the header.</h2>
+      <h2>This is the header.</h2>
     </div>
     <div class="item sidebar">
-        <p>This is the sidebar.</p>
+      <p>This is the sidebar.</p>
     </div>
     <div class="item content">
-        <p>This is the main content.</p>
+      <p>This is the main content.</p>
     </div>
     <div class="item turtle">🐢</div>
     <div class="item footer">
-        <p>This is the footer.</p>
+      <p>This is the footer.</p>
     </div>
   </div>
 </body>
